@@ -4,7 +4,7 @@
 #include <iostream>
 #include <algorithm>
 #include <iomanip>
-
+#include<string>
 int res = 0;
 using namespace std;
 
@@ -13,7 +13,7 @@ struct Sinhvien
 {
     /* data */
     int msv;
-    char ten[30];
+    string ten;
     double diemtoan, diemvan, diemanh;
 
     void Nhap() {
@@ -21,7 +21,7 @@ struct Sinhvien
         cin >> msv;
         cout << "Nhap ho va ten sinh vien: ";
         fflush(stdin);
-        gets_s(ten);
+        getline(cin,ten);
         do
         {
             cout << "Nhap diem toan: ";
